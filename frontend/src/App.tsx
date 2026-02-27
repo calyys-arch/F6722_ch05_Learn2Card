@@ -72,7 +72,7 @@ function validateDeckSchema(value: unknown): { ok: true; deck: Deck } | { ok: fa
     typeof stats.cardCount === "number";
   if (!statOk) return { ok: false, error: "stats 欄位格式錯誤：請確認包含 paragraphCount/topicCount/cardCount。" };
 
-  return { ok: true, deck: value as Deck };
+  return { ok: true, deck: value as unknown as Deck };
 }
 
 function clampNumber(value: number, min: number, max: number) {
