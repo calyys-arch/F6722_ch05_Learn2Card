@@ -208,6 +208,28 @@
     border: 1px solid;
 }
 
+.alert-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: currentColor;
+    text-decoration: underline;
+}
+
+.link-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
 .alert-error {
     background: #fff1f2;
     border-color: #fecdd3;

@@ -460,7 +460,16 @@ const App = () => {
               ) : null}
 
               {inputError ? <div className="alert alert-error">{inputError}</div> : null}
-              {processError ? <div className="alert alert-error">{processError}</div> : null}
+              {processError ? (
+                <div className="alert alert-error">
+                  <div>{processError}</div>
+                  <div className="alert-actions">
+                    <button className="link-button" onClick={() => void handleGenerate()} disabled={processing}>
+                      重試生成
+                    </button>
+                  </div>
+                </div>
+              ) : null}
               {processSuccess ? <div className="alert alert-success">{processSuccess}</div> : null}
 
               <div className="actions">
